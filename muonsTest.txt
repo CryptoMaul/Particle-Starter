@@ -1,0 +1,24 @@
+Run 141544 event 5
+Njets 0
+m1: pt,eta,phi,m= 231.277 0.496237 -2.22082 0.1 dptinv: 0.000370146
+m2: pt,eta,phi,m= 222.408 -0.198471 0.942319 0.1 dptinv: 0.00038302
+
+Run 141544 event 7
+Njets 1
+m1: pt,eta,phi,m= 281.327 -0.489914 1.12498 0.1 dptinv: 0.000406393
+m2: pt,eta,phi,m= 238.38 0.128715 -2.07527 0.1 dptinv: 0.000399279
+
+Run 141572 event 2
+Njets 2
+m1: pt,eta,phi,m= 243.862 0.363307 1.14333 0.1 dptinv: 0.000426386
+m2: pt,eta,phi,m= 219.52 -0.0366446 -2.15279 0.1 dptinv: 0.000426963
+
+Run 141572 event 3
+Njets 0
+m1: pt,eta,phi,m= 249.809 0.0420153 -2.20356 0.1 dptinv: 0.000360368
+m2: pt,eta,phi,m= 259.533 -0.637659 0.938402 0.1 dptinv: 0.000362363
+
+Run 141572 event 4
+Njets 2
+m1: pt,eta,phi,m= 252.531 -0.378254 -2.18576 0.1 dptinv: 0.000392842
+m2: pt,eta,phi,m= 241.758 0.684516 0.945008 0.1 dptinv: 0.000384454
