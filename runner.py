@@ -61,7 +61,7 @@ class SimCol:
     def calcInvMass(self):
         self.m1.calcFourVector()
         self.m2.calcFourVector()
-        self.invMass = ((self.m1.fV[0] + self.m2.fV[0]) ** 2 - math.fabs(self.m1.p + self.m2.p) ** 2) ** 0.5
+        self.invMass = ((self.m1.fV[0] + self.m2.fV[0]) ** 2 - math.fabs(self.m1.p ** 2 + self.m2.p ** 2 + 2 * (self.m1.fv[1] * self.m2.fv[1] + self.m1.fv[2] * self.m2.fv[2] + self.m1.fv[3] * self.m2.fv[3]))) ** 0.5
 
     def __str__(self):
         return 'Run ' + str(self.run) + ', Event ' + str(self.event) + ', Invariant Mass: ' + str(self.invMass) + '\n'
