@@ -28,7 +28,7 @@ class Muon:
     def calcFourVector(self):
         px = self.pt * math.cos(self.phi)
         py = self.pt * math.sin(self.phi)
-        pz = self.pt * math.sin(self.eta)
+        pz = self.pt * math.sinh(self.eta)
 
         self.p = (px ** 2 + py ** 2 + pz ** 2) ** 0.5
         energy = (0.1 ** 2 + self.p ** 2) ** 0.5
@@ -61,7 +61,7 @@ class SimCol:
     def calcInvMass(self):
         self.m1.calcFourVector()
         self.m2.calcFourVector()
-        self.invMass = ((self.m1.fV[0] + self.m2.fV[0]) ** 2 - math.fabs(self.m1.p ** 2 + self.m2.p ** 2 + 2 * (self.m1.fv[1] * self.m2.fv[1] + self.m1.fv[2] * self.m2.fv[2] + self.m1.fv[3] * self.m2.fv[3]))) ** 0.5
+        self.invMass = ((self.m1.fV[0] + self.m2.fV[0]) ** 2 - math.fabs(self.m1.p ** 2 + self.m2.p ** 2 + 2 * (self.m1.fV[1] * self.m2.fV[1] + self.m1.fV[2] * self.m2.fV[2] + self.m1.fV[3] * self.m2.fV[3]))) ** 0.5
 
     def __str__(self):
         return 'Run ' + str(self.run) + ', Event ' + str(self.event) + ', Invariant Mass: ' + str(self.invMass) + '\n'
