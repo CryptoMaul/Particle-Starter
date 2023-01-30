@@ -44,6 +44,7 @@ class SimCol:
 
 allCollisions = []
 collision = None
+histo = TH1F("histo", "invMass", 15533, 240, 962)
 
 with open('muons.txt') as f:
     line = f.readline()
@@ -63,7 +64,12 @@ f = open('muonResultsROOT.txt', 'w')
 
 for col in allCollisions:
     col.calcInvMass()
+    histo.Fill(col.invMass)
     f.write(str(col))
 f.close()
+
+tf = TFile("muons.root", "recreate")
+histo.Write()
+tf.Close()
 
 print("Done")
