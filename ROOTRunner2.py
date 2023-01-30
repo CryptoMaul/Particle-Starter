@@ -44,7 +44,7 @@ class SimCol:
 
 allCollisions = []
 collision = None
-histo = TH1F("histo", "invMass", 15533, 240, 962)
+histo = TH1F("histo", "Invariant Mass Distribution; Invariant Mass; Number of Occurrences", 100, 240, 962)
 
 with open('muons.txt') as f:
     line = f.readline()
